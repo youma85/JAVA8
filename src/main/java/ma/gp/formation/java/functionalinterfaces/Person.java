@@ -38,6 +38,10 @@ public class Person {
         return this;
     }
 
+    public static boolean isMajor(Person person){
+        return person.age>=18;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
