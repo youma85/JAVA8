@@ -1,6 +1,6 @@
 package ma.gp.formation.java.functionalinterfaces;
 
-public class Person {
+public class Person implements  Comparable<Person> {
     private String name;
     private String gender;
     private Integer age;
@@ -40,6 +40,11 @@ public class Person {
 
     public static boolean isMajor(Person person){
         return person.age>=18;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return gender.compareTo(o.gender);
     }
 
     @Override
